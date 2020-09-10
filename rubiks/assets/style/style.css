@@ -1,0 +1,229 @@
+/* Define variables */
+/* Functionm */
+/* Animation */
+@-webkit-keyframes cube1 {
+  0% {
+    -webkit-transform: rotateY(0deg) rotateZ(0deg) rotateX(0deg) translateY(20px);
+            transform: rotateY(0deg) rotateZ(0deg) rotateX(0deg) translateY(20px);
+  }
+  25% {
+    -webkit-transform: rotateY(-90deg) rotateZ(-60deg) rotateX(0deg) translateY(20px);
+            transform: rotateY(-90deg) rotateZ(-60deg) rotateX(0deg) translateY(20px);
+  }
+  50% {
+    -webkit-transform: rotateY(-180deg) rotateZ(0deg) rotateX(-10deg) translateY(20px);
+            transform: rotateY(-180deg) rotateZ(0deg) rotateX(-10deg) translateY(20px);
+  }
+  75% {
+    -webkit-transform: rotateY(-27deg) rotateZ(-90deg) rotateX(0deg) translateY(20px);
+            transform: rotateY(-27deg) rotateZ(-90deg) rotateX(0deg) translateY(20px);
+  }
+  100% {
+    -webkit-transform: rotateY(-360deg) rotateZ(0deg) rotateX(0deg) translateY(20px);
+            transform: rotateY(-360deg) rotateZ(0deg) rotateX(0deg) translateY(20px);
+  }
+}
+@keyframes cube1 {
+  0% {
+    -webkit-transform: rotateY(0deg) rotateZ(0deg) rotateX(0deg) translateY(20px);
+            transform: rotateY(0deg) rotateZ(0deg) rotateX(0deg) translateY(20px);
+  }
+  25% {
+    -webkit-transform: rotateY(-90deg) rotateZ(-60deg) rotateX(0deg) translateY(20px);
+            transform: rotateY(-90deg) rotateZ(-60deg) rotateX(0deg) translateY(20px);
+  }
+  50% {
+    -webkit-transform: rotateY(-180deg) rotateZ(0deg) rotateX(-10deg) translateY(20px);
+            transform: rotateY(-180deg) rotateZ(0deg) rotateX(-10deg) translateY(20px);
+  }
+  75% {
+    -webkit-transform: rotateY(-27deg) rotateZ(-90deg) rotateX(0deg) translateY(20px);
+            transform: rotateY(-27deg) rotateZ(-90deg) rotateX(0deg) translateY(20px);
+  }
+  100% {
+    -webkit-transform: rotateY(-360deg) rotateZ(0deg) rotateX(0deg) translateY(20px);
+            transform: rotateY(-360deg) rotateZ(0deg) rotateX(0deg) translateY(20px);
+  }
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #e7e7e7;
+}
+
+.scene {
+  width: 200px;
+  height: 200px;
+  margin: 80px;
+  -webkit-perspective: 400px;
+          perspective: 400px;
+}
+
+.cube {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  -webkit-animation-name: cube1;
+          animation-name: cube1;
+  -webkit-animation-duration: 13s;
+          animation-duration: 13s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.cube__face {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+}
+
+.cube__face--front {
+  -webkit-transform: rotateY(0deg) translateZ(100px);
+          transform: rotateY(0deg) translateZ(100px);
+  background: rgba(255, 0, 0, 0.7);
+}
+
+.cube__face--front .blocks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cube__face--front .blocks .block1,
+.cube__face--front .blocks .block2,
+.cube__face--front .blocks .block3 {
+  width: 67px;
+  height: 67px;
+  background: #e48a8a;
+  border: 1px solid #000;
+}
+
+.cube__face--right {
+  -webkit-transform: rotateY(90deg) translateZ(100px);
+          transform: rotateY(90deg) translateZ(100px);
+  background: rgba(214, 211, 36, 0.7);
+}
+
+.cube__face--right .blocks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cube__face--right .blocks .block1,
+.cube__face--right .blocks .block2,
+.cube__face--right .blocks .block3 {
+  width: 67px;
+  height: 67px;
+  background: #12b886;
+  border: 1px solid #000;
+}
+
+.cube__face--back {
+  -webkit-transform: rotateY(180deg) translateZ(100px);
+          transform: rotateY(180deg) translateZ(100px);
+  background: rgba(89, 189, 43, 0.7);
+}
+
+.cube__face--back .blocks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cube__face--back .blocks .block1,
+.cube__face--back .blocks .block2,
+.cube__face--back .blocks .block3 {
+  width: 67px;
+  height: 67px;
+  background: #f76707;
+  border: 1px solid #000;
+}
+
+.cube__face--left {
+  -webkit-transform: rotateY(-90deg) translateZ(100px);
+          transform: rotateY(-90deg) translateZ(100px);
+  background: rgba(43, 184, 189, 0.7);
+}
+
+.cube__face--left .blocks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cube__face--left .blocks .block1,
+.cube__face--left .blocks .block2,
+.cube__face--left .blocks .block3 {
+  width: 67px;
+  height: 67px;
+  background: #4c6ef5;
+  border: 1px solid #000;
+}
+
+.cube__face--top {
+  -webkit-transform: rotateX(90deg) translateZ(100px);
+          transform: rotateX(90deg) translateZ(100px);
+  background: rgba(43, 65, 189, 0.7);
+}
+
+.cube__face--top .blocks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cube__face--top .blocks .block1,
+.cube__face--top .blocks .block2,
+.cube__face--top .blocks .block3 {
+  width: 67px;
+  height: 67px;
+  background: #fab005;
+  border: 1px solid #000;
+}
+
+.cube__face--bottom {
+  -webkit-transform: rotateX(-90deg) translateZ(100px);
+          transform: rotateX(-90deg) translateZ(100px);
+  background: rgba(189, 43, 189, 0.7);
+}
+
+.cube__face--bottom .blocks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cube__face--bottom .blocks .block1,
+.cube__face--bottom .blocks .block2,
+.cube__face--bottom .blocks .block3 {
+  width: 67px;
+  height: 67px;
+  background: #7950f2;
+  border: 1px solid #000;
+}
+/*# sourceMappingURL=style.css.map */
