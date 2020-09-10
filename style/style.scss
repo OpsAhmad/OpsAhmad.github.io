@@ -1,0 +1,16 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: sans-serif;
+}
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+}
+a {
+  text-decoration: none;
+  margin: 0 10px;
+}
