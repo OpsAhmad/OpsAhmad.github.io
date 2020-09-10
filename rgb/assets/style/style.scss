@@ -1,0 +1,30 @@
+body {
+  background: rgb(240, 240, 240);
+  font-weight: bold;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Courier New", Courier, monospace;
+}
+.box {
+  background: #fff;
+  width: 400px;
+  border-radius: 20px;
+}
+.result {
+  background: #000;
+  height: 200px;
+  border-radius: 20px 20px 0 0;
+}
+.output {
+  text-align: center;
+  margin: 20px 0 0;
+}
+.slider {
+  padding: 20px;
+}
+input {
+  width: 100%;
+}
